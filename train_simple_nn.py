@@ -1,4 +1,5 @@
 # set the matplotlib backend so figures can be saved in the background
+# https://www.pyimagesearch.com/2018/09/10/keras-tutorial-how-to-get-started-with-keras-deep-learning-and-python/
 import matplotlib
 
 matplotlib.use("Agg")
@@ -49,3 +50,6 @@ for imagePath in imagePaths:
     # labels list
     label = imagePath.split(os.path.sep)[-2]
     labels.append(label)
+
+data = np.array(data, dtype="float") / 255.0
+labels = np.array(labels)
